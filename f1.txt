@@ -1,0 +1,207 @@
+Source Code Repository tool
+============================
+
+-> In a project multiple developers will work
+
+-> Developers will work from different different locations
+
+-> All the developers code should be store at one place ( Here code integration will happen)
+
+-> To integrate all the developers source code at one place we will use sourcecode repository software.
+
+
+Advantages with Source code repository
+-------------------------------------
+
+-> All the developers can connect with repository server and can itegrate the code.
+
+-> Repository server will provide monitoring access
+
+    - Who
+    - When
+    - What
+    - Why
+
+-> Repository server will preserve both older versions and latest versions
+
+Repository tools
+-------------------
+
+SVN (outdated)
+
+Git Hub
+
+Bitbucket
+
+
+Environment Setup
+----------------------
+
+-> Create ccount in git hub (https://github.com/)
+
+-> Download and install the git client software (https://git-scm.com/download/win)
+
+-> Once installation is completed check wether git is installed successfully or not by using below command
+
+  git --version
+
+Working with GitHub
+-----------------------
+
+-> Login into the github account
+
+-> Create the repository in GitHub
+   
+   In the GitHub repository we are going to store theproject source code, every project will have one repository
+
+-> When you create the repository, one unique url will be generated  i.e repository url
+
+-> All the developers will connect to the repository by using repository url only 
+
+-> We can create 2 types of repositories
+
+   1. public repository
+   2. Private repository 
+
+-> Public repository means every one can read data from thr repository, but for write operation you should have credentials
+
+-> Private repository means wew ill choose who can read and who can write 
+
+Ex: https://github.com/MRaju2022/maven.git
+
+
+
+Git Bash
+------
+
+-> We can use this git bash as client softwate to perform the git operations
+
+-> To see frequently used git commands
+
+    git help
+
+-> To open the documentation of any perticular command
+
+   git help <cmd-name>
+
+
+Version Controlling System
+--------------------------
+
+1. It is taking the code coming from all the developers and it is creating one intgrated project
+
+2. It is preserving both older versions and lates versions of the code
+
+3. It is making the track of who is making what kind of changes
+
+Types of version controlling systems
+-----------------------------------
+
+1. Centralized version controlling system
+2. Distributed version controlling system
+
+
+1. Centralized version controlling system
+-------------------------------------------
+
+Here we ahve a remote server where all the code is uploaded, all the team memebrs simply checkin their code into this
+remote server only
+
+Here version controlling is happening only on this server
+
+SVN we are going to use as centralized version controlling system
+
+
+2. Distributed version controlling system
+---------------------------------------------
+
+-> Here we have a local repository installed on every developer machine
+
+-> Initially the code created by the individual developer is uploaded into this local repository where version controling
+is happens at the level of individual developer.
+
+-> Later it is uploaded into the remote server where version controlling happens at the level of entire team
+
+
+-> Git Hub we are going to use as Distributed version controlling system
+
+
+-> Git uses below 3 sections in the local machine
+
+   1. Working directory or work space
+   2. Stagging Area
+   3. Local Repository
+
+-> Working directory is the folder where the developer creates all the code. The files created in this folder are initially
+called as "untracked files"
+
+-> Stagging area is the intermediate buffer zone into which files move from the working directory. These files are called
+as "stagged files".
+
+-> Local repository is where version controlling happens and all the file from stagging area move into local repository.
+These files are called as "Committed files".
+
+
+Configure user name and email in git bash with below commands
+---------------------------------------------------------------
+
+$ git config --global user.name "<uname>"
+
+$ git config --global user.email "<email>"
+
+-> To see the list of default configurtion
+
+$ git config --global --list
+
+https://github.com/MRaju2022/DevOps-06.git
+
+
+-> To initialize working directory as a git repository
+
+    $git init
+
+-> Create empty files in working directory
+
+    $touch f1.txt f2.txt f3.txt f4.txt
+
+-> To send files from working directory to stagging area
+
+   $git add <file-name>
+
+-> To send multiple files into stagging area
+
+   $git add <file1> <file2> <file3>
+
+-> To send all the files and folders in to stagging area
+
+   $git add .
+
+-> To remove the files from stagging area and bring them back to to untracked section
+
+   $git reset <file-name>
+
+          or
+
+    $git rm --cached <file-name>
+
+-> To send the files from stagging area to local repository
+
+   $git commit -m "some message"
+
+-> To see the status of the untracked files and stagged files
+
+   $git status
+
+-> To see the list of commits that are done in local repository
+
+   $git log
+
+-> To see the commit history in one line
+
+   $git log --oneline
+
+-> To push the code from local repository to remote repository
+
+   $git push
+
+Note: If you are doing "git push" for first  time it will ask to enter your github account password
